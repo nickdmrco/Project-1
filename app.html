@@ -2,146 +2,192 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Hyker</title>
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
- <style>
-  #logo {
-   width: 350px;
-  }
-  
-  #homeLink {
-   padding-left: 40px;
-   /* padding-right: 50px; */
-   margin-left: auto;
-   margin-right: auto;
-   font-weight: bold;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+  <style>
+    h1,
+    p {
+      float: left;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      text-align: left !important;
+      width: 100%;
+    }
 
-  * {
-  box-sizing: border-box
-}
+    #logo {
+      width: 350px;
+    }
 
-/* Slideshow container */
+    #homeLink {
+      padding-left: 40px;
+      /* padding-right: 50px; */
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bold;
+    }
 
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+    * {
+      box-sizing: border-box
+    }
 
-/* Hide the images by default */
+    /* Slideshow container */
 
-.mySlides {
-  display: none;
-}
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+    /* Hide the images by default */
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+    .mySlides {
+      display: none;
+    }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: .4
-  }
-  to {
-    opacity: 1
-  }
-}
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
 
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-  to {
-    opacity: 1
-  }
-}
- </style>
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+  </style>
 
 </head>
 
 <body>
- <nav class="uk-navbar-container uk-margin" uk-navbar>
-  <div class="uk-navbar-left">
- 
-   <a class="uk-navbar-item uk-logo" href="#"><img id='logo' src='./assets/HykerLogo3.png'></a>
- 
-   <ul class="uk-navbar-nav">
-    <li>
-     <a href="./index.html" id='homeLink'>Find Your Hike!</a>
-    </li>
-   </ul>
-   <ul class="uk-navbar-nav">
-    <li>
-     <a href="./app.html" id='#'>About</a>
-    </li>
-   </ul>
-   <ul class="uk-navbar-nav">
-    <li>
-     <a href="./contact.html" id='#'>Contact Us</a>
-    </li>
-   </ul>
- </nav>
+  <nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
 
-<div class="slideshow-container">
+      <a class="uk-navbar-item uk-logo" href="#"><img id='logo' src='./assets/HykerLogo3.png'></a>
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="assets/1.jpg" style="width:100%">
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="./index.html" id='homeLink'>Find Your Hike!</a>
+        </li>
+      </ul>
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="./app.html" id='#'>About</a>
+        </li>
+      </ul>
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="./contact.html" id='#'>Contact Us</a>
+        </li>
+      </ul>
+  </nav>
+
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="assets/1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="assets/2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="assets/3.jpg" style="width:100%">
+    </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
   </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="assets/2.jpg" style="width:100%">
-  </div>
+  <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div>
+      <!-- <div class="uk-card uk-card-default uk-card-body">Item</div> -->
 
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="assets/3.jpg" style="width:100%">
-  </div>
-  
-</div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
+      <article class="uk-article">
 
- <script>
-  var slideIndex = 0;
-  showSlides();
+        <h1 class="uk-article-title"><a class="uk-link-reset" href="">About Hyker</a></h1>
 
-  function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 5000); 
-}
-</script>
 
- <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+        <p class="uk-text-lead">We are your one-stop site for finding local hiking trails wherever you are or plan to
+          be.
+        </p>
+
+        <p>Enter your location search for local hiking tails and weather conditions.</p>
+
+        <div class="uk-grid-small uk-child-width-auto" uk-grid>
+
+
+        </div>
+
+        <h1 class="uk-article-title"><a class="uk-link-reset" href="">Reviews</a></h1>
+
+
+        <p class="uk-text-lead"> <img src="./assets/Calum.png" alt="Calum" height="250px" width="250px"></p>
+        <p>Now that I am no longer a teaching assistant, I definitely found myself again through being one with the outdoors. Thank
+        you Hyker for helping me find myself.</p>
+
+        <p class="uk-text-lead"> <img src="./assets/Quinton.jpg" alt="Quinton"height="250px" width="250px" > We are your one-stop site for finding local hiking trails wherever you are or plan to
+          be.
+        </p>
+
+
+        <script>
+          var slideIndex = 0;
+          showSlides();
+
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000);
+          }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
 
 </body>
+
 </html>
