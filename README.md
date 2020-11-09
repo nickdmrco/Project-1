@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Project-1
-hi
-=======
-=======
 
->>>>>>> 841491dfe07b1da7b6794b2009f73732fa99ba5b
-# Project-1 `Name of App`
+# Project-1: Hyker
 
 ## Team Members
 Loreina Salalila, Christian Parks, Amee Parmar, Nick DeMarco
 
 ### About:
 
-Bio
+Welcome to Hyker! Your one stop site for finding local hiking trails wherever you are or plan to be. Enter any city into the search and you'll be able to see trails nearby. You'll also be provided with weather conditions so you don't get caught in the upcoming tornado...that would be unfortunate.
+
 
 #### Screenshots
 
@@ -25,7 +19,3 @@ LINK
 
 ##### Javascript and API
 1. Using google map API and OpenWeather API
-<<<<<<< HEAD
->>>>>>> 6f9c1291a74a51693827e94e7bf35fbcce2456ec
-=======
->>>>>>> 841491dfe07b1da7b6794b2009f73732fa99ba5b
