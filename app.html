@@ -7,6 +7,114 @@
   <title>Hyker</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
   <style>
+    .container {
+      border: 2px solid #ccc;
+      background-color: #eee;
+      border-radius: 5px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .container::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .container img {
+      float: left;
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+
+    .container span {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .heading {
+      font-size: 25px;
+      margin-right: 25px;
+    }
+
+    .fa {
+      font-size: 25px;
+    }
+
+    .checked {
+      color: orange;
+    }
+
+    .side {
+      float: left;
+      width: 15%;
+      margin-top: 10px;
+    }
+
+    .middle {
+      float: left;
+      width: 70%;
+      margin-top: 10px;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .bar-container {
+      width: 100%;
+      background-color: #f1f1f1;
+      text-align: center;
+      color: white;
+    }
+
+    .bar-5 {
+      width: 60%;
+      height: 18px;
+      background-color: #4CAF50;
+    }
+
+    .bar-4 {
+      width: 30%;
+      height: 18px;
+      background-color: #2196F3;
+    }
+
+    .bar-3 {
+      width: 10%;
+      height: 18px;
+      background-color: #00bcd4;
+    }
+
+    .bar-2 {
+      width: 4%;
+      height: 18px;
+      background-color: #ff9800;
+    }
+
+    .bar-1 {
+      width: 15%;
+      height: 18px;
+      background-color: #f44336;
+    }
+
     h1,
     p {
       float: left;
@@ -23,25 +131,16 @@
 
     #homeLink {
       padding-left: 40px;
-      /* padding-right: 50px; */
       margin-left: auto;
       margin-right: auto;
       font-weight: bold;
     }
-
-    * {
-      box-sizing: border-box
-    }
-
-    /* Slideshow container */
 
     .slideshow-container {
       max-width: 1000px;
       position: relative;
       margin: auto;
     }
-
-    /* Hide the images by default */
 
     .mySlides {
       display: none;
@@ -81,6 +180,31 @@
         opacity: 1
       }
     }
+
+    @media (max-width: 400px) {
+
+      .side,
+      .middle {
+        width: 100%;
+      }
+
+      .right {
+        display: none;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        text-align: center;
+      }
+
+      .container img {
+        margin: auto;
+        float: none;
+        display: block;
+      }
+    }
+
   </style>
 
 </head>
@@ -110,7 +234,6 @@
 
   <div class="slideshow-container">
 
-    <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
       <img src="assets/1.jpg" style="width:100%">
@@ -137,35 +260,97 @@
 
   <div class="uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
-      <!-- <div class="uk-card uk-card-default uk-card-body">Item</div> -->
-
-
       <article class="uk-article">
 
         <h1 class="uk-article-title"><a class="uk-link-reset" href="">About Hyker</a></h1>
 
 
-        <p class="uk-text-lead">We are your one-stop site for finding local hiking trails wherever you are or plan to
-          be.
-        </p>
+        <p class="uk-text-lead">We believe that nature is what unites us all. Wherever we go — from lush forests to rolling hillsides to city greenways
+        — we’re all seeking the same vibes. Breathing in the fresh air. Feeling the sun on our cheeks. Reveling in the sound of
+        branches in the breeze. That’s what inspired us from the beginning, and it’s what keeps us exploring today.</p>
 
-        <p>Enter your location search for local hiking tails and weather conditions.</p>
-
-        <div class="uk-grid-small uk-child-width-auto" uk-grid>
-
-
-        </div>
+        <div class="uk-grid-small uk-child-width-auto" uk-grid></div>
 
         <h1 class="uk-article-title"><a class="uk-link-reset" href="">Reviews</a></h1>
 
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <p>4.1 average based on 254 reviews.</p>
+        <hr style="border:3px solid #f1f1f1">
 
-        <p class="uk-text-lead"> <img src="./assets/Calum.png" alt="Calum" height="250px" width="250px"></p>
-        <p>Now that I am no longer a teaching assistant, I definitely found myself again through being one with the outdoors. Thank
-        you Hyker for helping me find myself.</p>
+        <div class="row">
+          <div class="side">
+            <div>5 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-5"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>150</div>
+          </div>
+          <div class="side">
+            <div>4 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-4"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>63</div>
+          </div>
+          <div class="side">
+            <div>3 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-3"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>15</div>
+          </div>
+          <div class="side">
+            <div>2 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-2"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>6</div>
+          </div>
+          <div class="side">
+            <div>1 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-1"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>20</div>
+          </div>
+        </div>
 
-        <p class="uk-text-lead"> <img src="./assets/Quinton.jpg" alt="Quinton"height="250px" width="250px" > We are your one-stop site for finding local hiking trails wherever you are or plan to
-          be.
-        </p>
+        <div class="container">
+          <img src="./assets/Calum.png" alt="Calum" style="width:90px">
+          <p><span>Calum</span> Former Teaching Assistant</p>
+          <p>Now that I am no longer a teaching assistant, I definitely found myself again through being one with the
+            outdoors. Thank you Hyker for helping me find myself.</p>
+        </div>
+
+        <div class="container">
+          <img src="./assets/Quinton.jpg" alt="Quinton" style="width:90px">
+          <p><span>Quinton</span> Ethical Hacker/Teacher</p>
+          <p>If there's one thing I've learned from hiking it's the early bird gets the face full of spider webs.</p>
+        </div>
 
 
         <script>
