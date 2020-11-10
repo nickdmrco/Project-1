@@ -36,12 +36,12 @@
       box-sizing: border-box;
     }
 
-    body {
+    /* body {
       font-family: Arial;
       margin: 0 auto;
       max-width: 800px;
       padding: 20px;
-    }
+    } */
 
     .heading {
       font-size: 25px;
@@ -131,9 +131,11 @@
 
     #homeLink {
       padding-left: 40px;
+      /* padding-right: 50px; */
       margin-left: auto;
       margin-right: auto;
       font-weight: bold;
+      font-size: 14px;
     }
 
     .slideshow-container {
@@ -204,7 +206,6 @@
         display: block;
       }
     }
-
   </style>
 
 </head>
@@ -221,55 +222,61 @@
         </li>
       </ul>
       <ul class="uk-navbar-nav">
-        <li>
-          <a href="./app.html" id='#'>About</a>
+        <a href="./weather.html" id='weatherLink'>Check Your Weather!</a>
         </li>
       </ul>
       <ul class="uk-navbar-nav">
         <li>
-          <a href="./contact.html" id='#'>Contact Us</a>
+          <a href="./app.html" id='appLink'> About</a>
+        </li>
+      </ul>
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="./contact.html" id='contactLink'>Contact Us</a>
         </li>
       </ul>
   </nav>
-
-  <div class="slideshow-container">
-
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="assets/1.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="assets/2.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="assets/3.jpg" style="width:100%">
-    </div>
-
-  </div>
-  <br>
-
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
 
   <div class="uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
       <article class="uk-article">
 
+        <div class="slideshow-container">
+        
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="assets/1.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="assets/2.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="assets/3.jpg" style="width:100%">
+          </div>
+        
+        </div>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
         <h1 class="uk-article-title"><a class="uk-link-reset" href="">About Hyker</a></h1>
 
 
-        <p class="uk-text-lead">We believe that nature is what unites us all. Wherever we go — from lush forests to rolling hillsides to city greenways
-        — we’re all seeking the same vibes. Breathing in the fresh air. Feeling the sun on our cheeks. Reveling in the sound of
-        branches in the breeze. That’s what inspired us from the beginning, and it’s what keeps us exploring today.</p>
+        <p class="uk-text-lead">We believe that nature is what unites us all. Wherever we go — from lush forests to
+          rolling hillsides to city greenways
+          — we’re all seeking the same vibes. Breathing in the fresh air. Feeling the sun on our cheeks. Reveling in the
+          sound of
+          branches in the breeze. That’s what inspired us from the beginning, and it’s what keeps us exploring today.
+        </p>
 
-        <div class="uk-grid-small uk-child-width-auto" uk-grid></div>
+        <!-- <div class="uk-grid-small uk-child-width-auto" uk-grid></div> -->
 
         <h1 class="uk-article-title"><a class="uk-link-reset" href="">Reviews</a></h1>
 
