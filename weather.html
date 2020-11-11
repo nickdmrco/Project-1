@@ -17,6 +17,48 @@
       padding: 20px;
     } */
   
+/* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+/* Clear floats after containers */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+  .container {
+    text-align: center;
+  }
+
+  .container img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
+
     h1,
     p {
       float: left;
@@ -68,15 +110,30 @@
           </li>
         </ul>
     </nav>
+
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+      <div>
+        <article class="uk-article">
+    
+          <h1 class="uk-article-title"><a class="uk-link-reset" href="">Welcome to Hyker.</a></h1>
+    
+          <p class="uk-text-lead">Enter your location search for local weather conditions, so you don't get caught in the upcoming tornado...that would
+          be unfortunate..</p>
+    
+          <div class="uk-grid-small uk-child-width-auto" uk-grid>
+          </div>
+      </div>
+    </div>
+
     <div class="bg-dark pt-2 pb-2">
-      <div class="container">
+      <div class="container-fluid">
         <h1 class="text-center text-white">Weather</h1>
       </div>
     </div>
     
     
     
-    <div class="container-fluid">
+    <div class="container">
     
     
       <div class="row">
@@ -86,7 +143,7 @@
     
     
           <div class="input-group mb-3">
-            <input id="searchTerm" type="text" class="form-control" placeholder="London, Miami, Los Angeles..."
+            <input id="searchTerm" type="text" class="form-control" placeholder="Enter City Name"
               class="input-group-append">
             <button id="searchBtn" type="button" id="button-addon2">Search</button>
           </div>
