@@ -10,7 +10,7 @@ Welcome to Hyker! Your one stop site for finding local hiking trails wherever yo
 
 #### Screenshots
 
-<img src="">
+<img src="https://github.com/nickdmrco/Project-1/blob/main/assets/Homepage.jpg?raw=true">
 
 #### The following link demonstrates the application functionality:
 
