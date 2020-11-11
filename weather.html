@@ -1,63 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Hiker App</title>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
-  
-  <!-- UIkit JS -->
+
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+
   <style>
-    /* body { */
-      /* font-family: Arial;
-      margin: 0 auto;
-      max-width: 800px;
-      padding: 20px;
-    } */
-  
-/* Style the container with a rounded border, grey background and some padding and margin */
-.container {
-  border: 2px solid #ccc;
-  background-color: #eee;
-  border-radius: 5px;
-  padding: 16px;
-  margin: 16px 0;
-}
+    .container {
+      border: 2px solid #ccc;
+      background-color: #eee;
+      border-radius: 5px;
+      padding: 16px;
+      margin: 16px 0;
+    }
 
-/* Clear floats after containers */
-.container::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+    .container::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
 
-/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
-.container img {
-  float: left;
-  margin-right: 20px;
-  border-radius: 50%;
-}
+    .container img {
+      float: left;
+      margin-right: 20px;
+      border-radius: 50%;
+    }
 
-/* Increase the font-size of a span element */
-.container span {
-  font-size: 20px;
-  margin-right: 15px;
-}
+    .container span {
+      font-size: 20px;
+      margin-right: 15px;
+    }
 
-/* Add media queries for responsiveness. This will center both the text and the image inside the container */
-@media (max-width: 500px) {
-  .container {
-    text-align: center;
-  }
+    @media (max-width: 500px) {
+      .container {
+        text-align: center;
+      }
 
-  .container img {
-    margin: auto;
-    float: none;
-    display: block;
-  }
-}
+      .container img {
+        margin: auto;
+        float: none;
+        display: block;
+      }
+    }
 
     h1,
     p {
@@ -68,123 +60,101 @@
       text-align: left !important;
       width: 100%;
     }
-  
+
     #logo {
       width: 350px;
     }
-  
+
     #homeLink {
       padding-left: 40px;
-      /* padding-right: 50px; */
       margin-left: auto;
       margin-right: auto;
       font-weight: bold;
       font-size: 14px;
     }
-    
   </style>
 </head>
+
 <body>
-    <nav class="uk-navbar-container uk-margin" uk-navbar>
-      <div class="uk-navbar-left">
-    
-        <a class="uk-navbar-item uk-logo" href="#"><img id='logo' src='./assets/HykerLogo3.png'></a>
-    
-        <ul class="uk-navbar-nav">
-          <li>
-            <a href="./index.html" id='homeLink'>Find Your Hike!</a>
-          </li>
-        </ul>
-        <ul class="uk-navbar-nav">
-          <a href="./weather.html" id='weatherLink'>Check Your Weather!</a>
-          </li>
-        </ul>
-        <ul class="uk-navbar-nav">
-          <li>
-            <a href="./app.html" id='appLink'> About</a>
-          </li>
-        </ul>
-        <ul class="uk-navbar-nav">
-          <li>
-            <a href="./contact.html" id='contactLink'>Contact Us</a>
-          </li>
-        </ul>
-    </nav>
+  <nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
 
-    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-      <div>
-        <article class="uk-article">
-    
-          <h1 class="uk-article-title"><a class="uk-link-reset" href="">Welcome to Hyker.</a></h1>
-    
-          <p class="uk-text-lead">Enter your location search for local weather conditions, so you don't get caught in the upcoming tornado...that would
-          be unfortunate..</p>
-    
-          <div class="uk-grid-small uk-child-width-auto" uk-grid>
-          </div>
+      <a class="uk-navbar-item uk-logo" href="#"><img id='logo' src='./assets/HykerLogo3.png'></a>
+
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="./index.html" id='homeLink'>Find Your Hike!</a>
+        </li>
+      </ul>
+      <ul class="uk-navbar-nav">
+        <a href="./weather.html" id='weatherLink'>Check Your Weather!</a>
+        </li>
+      </ul>
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="./app.html" id='appLink'> About</a>
+        </li>
+      </ul>
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="./contact.html" id='contactLink'>Contact Us</a>
+        </li>
+      </ul>
+  </nav>
+
+  <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div>
+      <article class="uk-article">
+
+        <h1 class="uk-article-title"><a class="uk-link-reset" href="">Welcome to Hyker.</a></h1>
+
+        <p class="uk-text-lead">Enter your location search for local weather conditions, so you don't get caught in the upcoming tornado...that would be unfortunate..</p>
+
+        <div class="uk-grid-small uk-child-width-auto" uk-grid>
+        </div>
+    </div>
+  </div>
+
+  <div class="bg-dark pt-2 pb-2">
+    <div class="container-fluid">
+      <h1 class="text-center text-white">Weather</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 bg-light pt-3 pb-3">
+
+        <div class="input-group mb-3">
+          <input id="searchTerm" type="text" class="form-control" placeholder="Enter City Name"
+            class="input-group-append">
+          <button id="searchBtn" type="button" id="button-addon2">Search</button>
+        </div>
+
+        <div class="card">
+          <ul class="list-group list-group-flush list">
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col-lg-9">
+        <div id="currentCity" class="mt-4">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-4 col-md-12">
+      <div id="forecast" class="row">
       </div>
     </div>
 
-    <div class="bg-dark pt-2 pb-2">
-      <div class="container-fluid">
-        <h1 class="text-center text-white">Weather</h1>
-      </div>
-    </div>
-    
-    
-    
-    <div class="container">
-    
-    
-      <div class="row">
-    
-    
-        <div class="col-lg-3 bg-light pt-3 pb-3">
-    
-    
-          <div class="input-group mb-3">
-            <input id="searchTerm" type="text" class="form-control" placeholder="Enter City Name"
-              class="input-group-append">
-            <button id="searchBtn" type="button" id="button-addon2">Search</button>
-          </div>
-    
-    
-    
-          <div class="card">
-            <ul class="list-group list-group-flush list">
-            </ul>
-          </div>
-    
-        </div>
-    
-    
-    
-        <div class="col-lg-9">
-          <div id="currentCity" class="mt-4">
-    
-          </div>
-        </div>
-    
-      </div>
-    
-    
-    
-      <div class="mt-4 col-md-12">
-    
-    
-        <div id="forecast" class="row">
-    
-    
-        </div>
-    
-      </div>
-    
-    </div>
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="weather.js"></script>
+  </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="weather.js"></script>
   
 </body>
 </html>
