@@ -26,6 +26,7 @@ $("#searchBtn").on("click", function () {
     method: "GET"
   })
     .then(function (response) {
+      let currentWeather = response.weather[0].description
 
       let tempF = (response.main.temp - 273.15) * 1.80 + 32;
 
@@ -48,17 +49,18 @@ function getCurrentConditions(response) {
 
   $('#currentCity').empty();
 
-  const card = $("<div>").addClass("card");
-  const cardBody = $("<div>").addClass("card-body");
-  const city = $("<h4>").addClass("card-title").text(response.name);
-  const cityDate = $("<h4>").addClass("card-title").text(date.toLocaleDateString('en-US'));
-  const temperature = $("<p>").addClass("card-text current-temp").text("Temperature: " + tempF + " °F");
-  const humidity = $("<p>").addClass("card-text current-humidity").text("Humidity: " + response.main.humidity + "%");
-  const wind = $("<p>").addClass("card-text current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
+  const card = $("<div>").addClass("uk-card");
+  const cardBody = $("<div>").addClass("uk-card-body");
+  const city = $("<h4>").addClass("uk-card-title").text(response.name);
+  const cityDate = $("<h4>").addClass("uk-card-title").text(date.toLocaleDateString('en-US'));
+  const cityWeather = $("<p>").addClass('uk-card current-temp').text("The skies look like: " + response.weather[0].description);
+  const temperature = $("<p>").addClass("uk-card current-temp").text("Temperature: " + tempF + " °F");
+  const humidity = $("<p>").addClass("uk-card current-humidity").text("Humidity: " + response.main.humidity + "%");
+  const wind = $("<p>").addClass("uk-card current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
 
 
   city.append(cityDate);
-  cardBody.append(city, temperature, humidity, wind);
+  cardBody.append(city, cityWeather, temperature, humidity, wind);
   card.append(cardBody);
   $("#currentCity").append(card);
 
@@ -86,16 +88,17 @@ function getCurrentForecast() {
         let temp = (results[i].main.temp - 273.15) * 1.80 + 32;
         let tempF = Math.floor(temp);
 
-        const card = $("<div>").addClass("card col-md-2 ml-4 bg-primary text-white");
-        const cardBody = $("<div>").addClass("card-body p-3 forecastBody");
-        const cityDate = $("<h4>").addClass("card-title").text(date.toLocaleDateString('en-US'));
-        const temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature: " + tempF + " °F");
-        const humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity: " + results[i].main.humidity + "%");
-        const wind = $("<p>").addClass("card-text current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
+        const card = $("<div>").addClass("uk-card col-md-2 ml-4 bg-primary text-white");
+        const cardBody = $("<div>").addClass("uk-card-body p-3 forecastBody");
+        const cityDate = $("<h4>").addClass("uk-card-title").text(date.toLocaleDateString('en-US'));
+        const cityWeather = $("<p>").addClass('uk-card current-temp').text("The skies look like: " + response.weather[0].description);
+        const temperature = $("<p>").addClass("uk-card forecastTemp").text("Temperature: " + tempF + " °F");
+        const humidity = $("<p>").addClass("uk-card forecastHumidity").text("Humidity: " + results[i].main.humidity + "%");
+        const wind = $("<p>").addClass("uk-card current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
 
 
 
-        cardBody.append(cityDate, temperature, humidity);
+        cardBody.append(cityDate, cityWeather, temperature, humidity);
         card.append(cardBody);
         $("#forecast").append(card);
 
