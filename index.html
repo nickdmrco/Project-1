@@ -1,19 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Hiker App</title>
+
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC7mbC8kf9BdCQqWDR-fmfjpJpzGJdQe0&callback=initAutocomplete&libraries=places"
     defer></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
 
   <style>
+    .container {
+      border: 2px solid #ccc;
+      background-color: #eee;
+      border-radius: 5px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .header {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .container::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .container img {
+      float: left;
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+
+    .container span {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        text-align: center;
+      }
+
+      .container img {
+        margin: auto;
+        float: none;
+        display: block;
+      }
+    }
+
+    h1,
+    p {
+      float: left;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      text-align: left !important;
+      width: 100%;
+    }
+
+    #logo {
+      width: 350px;
+      height: 125px;
+    }
+
+    #homeLink {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
     #weatherLink {
       font-size: 14px;
@@ -24,80 +95,7 @@
     #map {
       height: 500px;
     }
-
-    #description {
-      font-family: Roboto;
-      font-size: 15px;
-      font-weight: 300;
-    }
-
-    #infowindow-content .title {
-      font-weight: bold;
-    }
-
-    #infowindow-content {
-      display: none;
-    }
-
-    #map #infowindow-content {
-      display: inline;
-    }
-
-    .pac-card {
-      margin: 10px 10px 0 0;
-      border-radius: 2px 0 0 2px;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      outline: none;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      background-color: #fff;
-      font-family: Roboto;
-    }
-
-    #pac-container {
-      padding-bottom: 12px;
-      margin-right: 12px;
-    }
-
-    .pac-controls {
-      display: inline-block;
-      padding: 5px 11px;
-    }
-
-    .pac-controls label {
-      font-family: Roboto;
-      font-size: 13px;
-      font-weight: 300;
-    }
-
-    #pac-input {
-      background-color: #fff;
-      font-family: Roboto;
-      font-size: 15px;
-      font-weight: 300;
-      margin-left: 12px;
-      padding: 0 11px 0 13px;
-      text-overflow: ellipsis;
-      width: 400px;
-    }
-
-    #pac-input:focus {
-      border-color: #4d90fe;
-    }
-
-    #title {
-      color: #fff;
-      background-color: #4d90fe;
-      font-size: 25px;
-      font-weight: 500;
-      padding: 6px 12px;
-    }
-
-    #target {
-      width: 345px;
-    }
   </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
 
   <script>
     function initAutocomplete() {
@@ -108,7 +106,7 @@
       });
 
       const input = document.getElementById("pac-input");
-      input.value+= "Hiking Trails Near:"
+      input.value += "Hiking Trails Near:"
 
       const searchBox = new google.maps.places.SearchBox(input);
       map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
@@ -168,51 +166,51 @@
 <body>
   <nav class="uk-navbar-container uk-margin" uk-navbar>
     <div class="uk-navbar-left">
-  
+
       <a class="uk-navbar-item uk-logo" href="#"><img id='logo' src='./assets/HykerLogo3.png'></a>
-  
+
       <ul class="uk-navbar-nav">
         <li>
-          <a href="./index.html" id='homeLink'>Find Your Hike!</a>
+          <a href="./index.html" class='header' id='homeLink'>Find Your Hike!</a>
         </li>
       </ul>
       <ul class="uk-navbar-nav">
-        <a href="./weather.html" id='weatherLink'>CHECK YOUR WEATHER!</a>
-        </li>
-      </ul>
-      <ul class="uk-navbar-nav">
-        <li>
-          <a href="./app.html" id='appLink'> About</a>
+        <a href="./weather.html" class='header' id='weatherLink'>CHECK YOUR WEATHER!</a>
         </li>
       </ul>
       <ul class="uk-navbar-nav">
         <li>
-          <a href="./contact.html" id='contactLink'>Contact Us</a>
+          <a href="./app.html" class='header' id='appLink'> About</a>
+        </li>
+      </ul>
+      <ul class="uk-navbar-nav">
+        <li>
+          <a href="./contact.html" class='header' id='contactLink'>Contact Us</a>
         </li>
       </ul>
   </nav>
-  
-  
+
   <div class="uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
       <article class="uk-article">
-  
+
         <h1 class="uk-article-title"><a class="uk-link-reset" href="">Welcome to Hyker.</a></h1>
-  
+
         <p class="uk-text-lead">We are your one-stop site for finding local hiking trails wherever you are or plan to
           be. Enter any city into the search and
           you'll be able to see trails nearby.
         </p>
 
         <p class="uk-text-lead">Enter your location search for local hiking tails.</p>
-  
+
         <div class="uk-grid-small uk-child-width-auto" uk-grid>
         </div>
-    </div> 
+    </div>
   </div>
 
   <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
   <div id="map"></div>
 
 </body>
+
 </html>
